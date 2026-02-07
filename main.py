@@ -46,4 +46,4 @@ server.collect(
 )
 
 if __name__ == "__main__":
-    asyncio.run(server.serve())
+    asyncio.run(server.serve(host="0.0.0.0"))
