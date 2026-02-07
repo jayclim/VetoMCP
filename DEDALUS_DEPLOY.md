@@ -21,7 +21,7 @@ An AI-powered budget management MCP server for the Dedalus Labs marketplace.
    - Select this repository
 
 3. **Configure Deployment**
-   - **Entry Point**: `mcp_main.py` (Dedalus will run `python mcp_main.py`)
+   - **Entry Point**: `main.py` (Dedalus requires this exact filename)
    - **Port**: Server listens on port 8080 at `/mcp` endpoint
    - **Environment Variables**: Add any required secrets (e.g., `DEDALUS_API_KEY`)
    - Click "Deploy"
@@ -45,10 +45,10 @@ result = runner.run(
 
 ```
 VetoMCP/
-├── mcp_main.py        # Dedalus MCP entry point
+├── main.py            # Dedalus MCP entry point (REQUIRED name)
 ├── pyproject.toml     # Dependencies for Dedalus
-├── main.py            # FastAPI REST API (separate)
-├── mcp_server.py      # Original FastMCP server
+├── fastapi_app.py     # FastAPI REST API (renamed)
+├── mcp_server.py      # Original FastMCP server (local dev)
 ├── models.py          # SQLModel database models
 ├── database.py        # Database configuration
 ├── services/          # Business logic
