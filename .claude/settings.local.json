@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(supabase --version:*)",
+      "Bash(npx supabase:*)",
+      "Bash(SUPABASE_ACCESS_TOKEN=sbp_6cb13a40f1604691ce06f9db4f08977d7580f241 npx supabase:*)",
+      "Bash(curl -s -X POST \"https://api.supabase.com/v1/projects/grumiadhituupspuzlor/database/query\" -H \"Authorization: Bearer sbp_6cb13a40f1604691ce06f9db4f08977d7580f241\" -H \"Content-Type: application/json\" -d '{\"\"query\"\": \"\"DELETE FROM supabase_migrations.schema_migrations WHERE version = ''''20260207172935''''\"\"}')",
+      "Bash(curl:*)"
+    ]
+  }
+}

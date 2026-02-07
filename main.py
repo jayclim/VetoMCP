@@ -26,6 +26,17 @@ from tools.local import (
     get_budget_methods, check_budget_for_purchase,
     suggest_budget_allocation, get_budget_health_score, project_monthly_spending
 )
+from tools.agent_guard_rails import (
+    authorize_purchase,
+    get_agent_spending_limits,
+    assess_purchase_risk,
+    validate_agent_action,
+    set_agent_spending_limits,
+    get_agent_settings_tool,
+    get_cumulative_agent_spend_tool,
+    log_agent_authorization,
+    get_agent_authorization_history_tool,
+)
 
 # Create the MCP server
 server = MCPServer("veto-budget")
@@ -43,6 +54,16 @@ server.collect(
     # Local Tools (no database)
     get_budget_methods, check_budget_for_purchase,
     suggest_budget_allocation, get_budget_health_score, project_monthly_spending,
+    # Agent Guard Rails (New)
+    authorize_purchase,
+    get_agent_spending_limits,
+    assess_purchase_risk,
+    validate_agent_action,
+    set_agent_spending_limits,
+    get_agent_settings_tool,
+    get_cumulative_agent_spend_tool,
+    log_agent_authorization,
+    get_agent_authorization_history_tool,
 )
 
 def run():
