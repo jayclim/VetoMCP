@@ -45,5 +45,8 @@ server.collect(
     suggest_budget_allocation, get_budget_health_score, project_monthly_spending,
 )
 
-if __name__ == "__main__":
+def run():
     asyncio.run(server.serve(host="0.0.0.0"))
+
+if __name__ == "__main__":
+    run()
